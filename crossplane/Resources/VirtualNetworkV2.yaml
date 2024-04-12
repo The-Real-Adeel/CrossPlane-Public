@@ -1,0 +1,29 @@
+# Create VNET
+apiVersion: network.azure.upbound.io/v1beta1
+kind: VirtualNetwork
+metadata:
+  name: "corpo-vnet-001"
+spec:
+  forProvider:
+    addressSpace:
+      - 10.0.0.0/16
+    location: Canada Central
+    resourceGroupName: CrossplaneRG
+    tags:
+      CostCentre: "1234"
+      Owner: "Adeel"
+      minorchangetag : "true"
+
+---
+# Create Subnet
+apiVersion: network.azure.upbound.io/v1beta1
+kind: Subnet
+metadata:
+  name: subnet-a
+spec:
+  forProvider:
+    addressPrefixes:
+      - 10.0.0.0/24
+    resourceGroupName: CrossplaneRG
+    virtualNetworkName: corpo-vnet-001
+

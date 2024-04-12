@@ -1,0 +1,10 @@
+apiVersion: azure.upbound.io/v1beta1
+metadata:
+  name: default
+kind: ProviderConfig
+spec:
+  credentials:
+    source: UserAssignedManagedIdentity
+  clientID: "b5cdfb52-5d2f-48b7-86ab-84e4333a0518"
+  subscriptionID: "ENTER ID"
+  tenantID: "ENTER ID"

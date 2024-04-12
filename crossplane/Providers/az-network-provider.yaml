@@ -1,0 +1,7 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-azure-network
+spec:
+  serviceAccount: aks-workload-identity # Test with here and without on the storage provider
+  package: xpkg.upbound.io/upbound/provider-azure-network:v0.41.0

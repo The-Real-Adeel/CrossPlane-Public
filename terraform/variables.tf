@@ -1,0 +1,3 @@
+locals {
+  locationCC = "Canada Central"
+}
